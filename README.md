@@ -1,13 +1,18 @@
-# [Traccar Client for Android](https://www.traccar.org/client)
+# [Bee Driver Client for Android Device](https://www.kkernn.tk/BeeDriverclientv0)
 
-[![Get it on Google Play](http://www.tananaev.com/badges/google-play.svg)](https://play.google.com/store/apps/details?id=org.traccar.client) [![Get it on F-Droid](http://www.tananaev.com/badges/f-droid.svg)](https://f-droid.org/repository/browse/?fdid=org.traccar.client)
+[![Get it on Google Play](http://www.kkernn.tk/badges/google-play.svg)]
+(https://play.google.com/store/apps/details?id=org.BeeDriverClient.client) 
 
 ## Overview
 
-Traccar Client is an Android GPS tracking application. It can work with Traccar open source server software.
+Bee Driver Tracking  Client is an Android GPS tracking application. It can work with Firebase Cloud Env amd Traccar open source server software.
 
 ## Team
 
+- Djimgou Patrick Virgile (kkernn.tk)
+- Timani Patrick  ivan (linkdln)
+
+Contribution :
 - Anton Tananaev ([anton@traccar.org](mailto:anton@traccar.org))
 
 ## License

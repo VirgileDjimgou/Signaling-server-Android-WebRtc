@@ -32,8 +32,8 @@
   <string name="menu_shortcuts">Add shortcuts</string>
   <string name="menu_clear">Clear</string>
   <string name="about_description">Real time GPS tracker for Android devices. Compatible with Traccar Server and other tracking systems.</string>
-  <string name="about_license">This application is free and open source, source code is licensed under Apache License Version 2.0 and available on GitHub.</string>
-  <string name="about_web">For more information visit\nwww.traccar.org/client</string>
+  <string name="about_license">This application is not free / partial , source code is licensed under Apache License Version 2.0 and available on GitHub.</string>
+  <string name="about_web">For more information visit\nwww.kkernn.tk/BeeDriverClient</string>
   <string name="status_service_create">Service started</string>
   <string name="status_service_destroy">Service stopped</string>
   <string name="status_send_success">Send successfully</string>
@@ -44,4 +44,6 @@
   <string name="hidden_app_name">Device Settings</string>
   <string name="hidden_alert">The app has been hidden. To open it again please dial 8722227 (TRACCAR).</string>
   <string name="error_msg_invalid_url">Please enter a valid http:// or https:// URL</string>
+  <string name="settings_provider_summary">settings Provider</string>
+  <string name="settings_provider_title">Bee Tracking</string>
 </resources>
