@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar klient</string>
+  <string name="app_logo">Traccar</string>
+  <string name="settings_status_off">Zaženi</string>
+  <string name="settings_status_on">Ustavi</string>
+  <string name="settings_status_off_summary">Servis ustavljen</string>
+  <string name="settings_status_on_summary">Servis teče</string>
+  <string name="menu_status">Stanje</string>
+  <string name="menu_clear">Počisti</string>
+  <string name="status_send_success">Pošiljanje uspelo</string>
+  <string name="status_send_fail">Pošiljanje spodletelo</string>
+  <string name="hidden_app_name">Nastavitve naprave</string>
+</resources>

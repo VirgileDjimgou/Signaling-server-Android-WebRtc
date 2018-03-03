@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar client</string>
+  <string name="app_logo">Traccar</string>
+  <string name="channel_default">Standaard kanaal</string>
+  <string name="settings_id_title">Toestelidentificatie</string>
+  <string name="settings_url_title">Server URL</string>
+  <string name="settings_url_summary">Tracking server URL</string>
+  <string name="settings_interval_title">Frequentie</string>
+  <string name="settings_interval_summary">Rapportageinterval in seconden</string>
+  <string name="settings_distance_title">Afstand</string>
+  <string name="settings_distance_summary">Rapportageafstand in meters</string>
+  <string name="settings_angle_title">Hoek</string>
+  <string name="settings_angle_summary">Rapportagehoek in graden</string>
+  <string name="settings_status_title">Server status</string>
+  <string name="settings_status_off">Start</string>
+  <string name="settings_status_on">Stop</string>
+  <string name="settings_status_off_summary">Service gestopt</string>
+  <string name="settings_status_on_summary">Service draait</string>
+  <string name="settings_provider_title">Locatie provider</string>
+  <string name="settings_provider_summary">Bron van locatie data</string>
+  <string name="settings_provider_gps">GPS provider</string>
+  <string name="settings_provider_network">Netwerk provider</string>
+  <string name="settings_provider_mixed">Gecombineerde providers</string>
+  <string name="settings_foreground_title">Voorgrond service</string>
+  <string name="settings_foreground_summary">Verhoog voorrang voor service</string>
+  <string name="menu_status">Status</string>
+  <string name="menu_about">Over ons</string>
+  <string name="menu_shortcuts">Voeg snelkoppelingen toe</string>
+  <string name="menu_clear">Wis</string>
+  <string name="about_description">Real time GPS tracker voor Android apparaten. Compatibel met de Traccar server en andere tracking systemen.</string>
+  <string name="about_license">Deze toepassing is gratis en open source, de broncode is beschikbaar onder de Apache Licentie versie 2.0 op GitHub.</string>
+  <string name="about_web">Voor meer informatie bezoek\nwww.traccar.org/client</string>
+  <string name="status_send_success">Succesvol verstuurd</string>
+  <string name="status_send_fail">Verzenden mislukt</string>
+  <string name="status_location_update">Locatie update</string>
+  <string name="status_connectivity_change">Verbinding gewijzigd</string>
+  <string name="hidden_app_name">Toestel instellingen</string>
+  <string name="hidden_alert">De app is verborgen. Om hem opnieuw te openen bel je naar 8722227 (TRACCAR).</string>
+  <string name="error_msg_invalid_url">Voer alstublieft een geldige http:// of https:// URL in</string>
+</resources>
