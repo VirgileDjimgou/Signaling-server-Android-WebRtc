@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "org.traccar.client"
+        applicationId "org.ioengine.tracker"
         buildConfigField "boolean", "HIDDEN_APP", "false"
         minSdkVersion 15
         targetSdkVersion 27
@@ -22,7 +22,7 @@ android {
         regular
         google
         hidden {
-            applicationId "org.traccar.client.hidden"
+            applicationId "org.ioengine.tracker.hidden"
             buildConfigField "boolean", "HIDDEN_APP", "true"
         }
     }
