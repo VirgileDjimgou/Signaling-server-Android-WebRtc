@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar Client</string>
+  <string name="app_logo">Traccar</string>
+  <string name="settings_id_title">Identificativo dispositivo</string>
+  <string name="settings_url_title">Server URL</string>
+  <string name="settings_url_summary">Tracking server URL</string>
+  <string name="settings_interval_title">Frequenza</string>
+  <string name="settings_interval_summary">Intervallo in secondi delle segnalazioni</string>
+  <string name="settings_distance_title">Distanza</string>
+  <string name="settings_distance_summary">Segnalazione distanza in metri</string>
+  <string name="settings_angle_title">Angolo</string>
+  <string name="settings_angle_summary">Segnalazione angolo in gradi</string>
+  <string name="settings_status_title">Stato del servizio</string>
+  <string name="settings_status_off">Start</string>
+  <string name="settings_status_on">Stop</string>
+  <string name="settings_status_off_summary">Servizio arrestato</string>
+  <string name="settings_status_on_summary">Servizio avviato</string>
+  <string name="settings_provider_title">Provider posizione</string>
+  <string name="settings_provider_summary">Fonte dei dati di localizzazione</string>
+  <string name="settings_provider_gps">Provider GPS</string>
+  <string name="settings_provider_network">Provider di rete</string>
+  <string name="settings_provider_mixed">Provider misto</string>
+  <string name="settings_foreground_title">Servizio in primo piano</string>
+  <string name="settings_foreground_summary">Aumenta la priorità del servizio</string>
+  <string name="menu_status">Stato</string>
+  <string name="menu_about">Informazioni</string>
+  <string name="menu_shortcuts">Aggiungi combinazione rapida</string>
+  <string name="menu_clear">Pulisci</string>
+  <string name="about_description">Real time GPS tracker per dispositivi Android. Compatibile con Traccar Server e altri sistemi di tracking.</string>
+  <string name="about_license">Questa applicazione è libera e open source, il codice sorgente è sotto licenza Apache License Version 2.0 e disponibile su GitHub.</string>
+  <string name="about_web">Per maggiori informazioni visitate \nwww.traccar.org/client</string>
+  <string name="status_send_success">Invio riuscito</string>
+  <string name="status_send_fail">Invio fallito</string>
+  <string name="status_location_update">Aggiornamento posizione</string>
+  <string name="status_connectivity_change">Connessione cambiata</string>
+  <string name="hidden_app_name">Impostazioni dispositivo</string>
+  <string name="hidden_alert">La app è stata nascosta. Per aprirla nuovamente digita 8722227 (TRACCAR).</string>
+  <string name="error_msg_invalid_url">Per favore inserisci un URL valido http:// o https://</string>
+</resources>

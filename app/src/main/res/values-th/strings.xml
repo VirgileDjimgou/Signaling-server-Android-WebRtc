@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar Client</string>
+  <string name="app_logo">Traccar</string>
+  <string name="settings_id_title">หมายเลขอุปกรณ์</string>
+  <string name="settings_url_title">ท๊่อยู่ URL เซิร์ฟเวอร์</string>
+  <string name="settings_url_summary">ท๊่อยู่ URL เซิร์ฟเวอร์ติดตาม</string>
+  <string name="settings_interval_title">ช่วงเวลาส่งข้อมูล</string>
+  <string name="settings_interval_summary">รายงานทุกช่วงเวลาวินาที</string>
+  <string name="settings_distance_title">ระยะทาง</string>
+  <string name="settings_distance_summary">การรายงานระยะทางเมตร</string>
+  <string name="settings_angle_title">มุม</string>
+  <string name="settings_angle_summary">รายงานในมุมองศา</string>
+  <string name="settings_status_title">สถานะเซิร์ฟเวอร์</string>
+  <string name="settings_status_off">เริ่มต้น</string>
+  <string name="settings_status_on">สิ้นสุด</string>
+  <string name="settings_status_off_summary">เริ่มทำงาน</string>
+  <string name="settings_status_on_summary">หยุดทำงาน</string>
+  <string name="settings_provider_title">ตัวบอกตำแหน่ง</string>
+  <string name="settings_provider_summary">แหล่งของข้อมูลบอกตำแหน่ง</string>
+  <string name="settings_provider_gps">ใช้จาก GPS</string>
+  <string name="settings_provider_network">ใช้จากข้อมูลเครือข่าย</string>
+  <string name="settings_provider_mixed">ใช้ร่วมกันทั้งสองแบบ</string>
+  <string name="settings_foreground_title">ทำงานเบื้องหน้า</string>
+  <string name="settings_foreground_summary">เพิ่มความลำดับสำคัญการทำงาน</string>
+  <string name="menu_status">สถานะ</string>
+  <string name="menu_about">เกี่ยวกับ</string>
+  <string name="menu_shortcuts">เพิ่มชอร์ตคัท</string>
+  <string name="menu_clear">ล้างข้อมูล</string>
+  <string name="about_description">Real time GPS tracker for Android devices. Compatible with Traccar Server and other tracking systems.</string>
+  <string name="about_license">This application is free and open source, source code is licensed under Apache License Version 2.0 and available on GitHub.</string>
+  <string name="about_web">For more information visit\nwww.traccar.org/client</string>
+  <string name="status_send_success">ส่งข้อมูลเรียบร้อย</string>
+  <string name="status_send_fail">ส่งข้อมูลล้มเหลว</string>
+  <string name="status_location_update">ปรับปรุงตำแหน่ง</string>
+  <string name="status_connectivity_change">เปลี่ยนแปลงการเชื่อมต่อ</string>
+  <string name="hidden_app_name">ตั้งค่าอุปกรณ์</string>
+  <string name="hidden_alert">The app has been hidden. To open it again please dial 8722227 (TRACCAR).</string>
+  <string name="error_msg_invalid_url">โปรดใส่ค่า http:// or https:// URL ที่ถูกต้อง</string>
+</resources>
