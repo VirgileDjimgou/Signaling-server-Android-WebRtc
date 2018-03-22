@@ -7,11 +7,20 @@ android {
     defaultConfig {
         applicationId "org.ioengine.tracker"
         buildConfigField "boolean", "HIDDEN_APP", "false"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 27
-        versionCode 47
-        versionName '5.10'
+        versionCode 2
+        versionName '2.0'
     }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
 
     lintOptions {
         checkReleaseBuilds false
@@ -35,6 +44,34 @@ dependencies {
     testCompile 'org.robolectric:robolectric:3.6.1'
     googleCompile 'com.google.firebase:firebase-core:11.8.0'
     googleCompile 'com.crashlytics.sdk.android:crashlytics:2.9.1'
+
+    // add
+
+    compile 'com.android.support:appcompat-v7:27.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-v4:27.0.0'
+    compile "io.reactivex.rxjava2:rxandroid:2.0.1"
+    compile 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
+    compile 'com.google.android.gms:play-services-maps:11.8.0'
+    compile 'com.google.android.gms:play-services-location:11.8.0'
+    compile 'com.google.android.gms:play-services-places:11.8.0'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    testCompile 'junit:junit:4.12'
+
+
+    //  telephone Country  .,...
+    // compile "com.googlecode.libphonenumber:libphonenumber:6.2"
+    // contry compile 'com.hbb20:ccp:1.7.1'
+    compile 'com.github.joielechong:countrycodepicker:2.1.5'
+    // compile 'com.hbb20:ccp:1.7.1'
+
+    // knife  ...
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+    // compile 'com.jakewharton:butterknife:8.7.0'
+    compile 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
+    // kapt 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
 }
 
 if (getGradle().getStartParameter().getTaskRequests().toString().contains("Google")) {

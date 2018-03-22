@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Traccar Client</string>
-  <string name="app_logo">Traccar</string>
+  <string name="app_name">BeeDriverTrack</string>
+  <string name="app_logo">Bee Driver Simple Version</string>
   <string name="shortcut_start">Start service</string>
   <string name="shortcut_stop">Stop service</string>
   <string name="shortcut_sos">Send SOS</string>
@@ -31,9 +31,9 @@
   <string name="menu_about">About</string>
   <string name="menu_shortcuts">Add shortcuts</string>
   <string name="menu_clear">Clear</string>
-  <string name="about_description">Real time GPS tracker for Android devices. Compatible with Traccar Server and other tracking systems.</string>
+  <string name="about_description">Real time GPS tracker for Android devices. Compatible with Bee Firebase Server and other tracking systems.</string>
   <string name="about_license">This application is free and open source, source code is licensed under Apache License Version 2.0 and available on GitHub.</string>
-  <string name="about_web">For more information visit\nwww.traccar.org/client</string>
+  <string name="about_web">For more information visit ....  Bee </string>
   <string name="status_service_create">Service started</string>
   <string name="status_service_destroy">Service stopped</string>
   <string name="status_send_success">Send successfully</string>
@@ -42,6 +42,19 @@
   <string name="status_network_online">Network online</string>
   <string name="status_network_offline">Network offline</string>
   <string name="hidden_app_name">Device Settings</string>
-  <string name="hidden_alert">The app has been hidden. To open it again please dial 8722227 (TRACCAR).</string>
+  <string name="hidden_alert">The app has been hidden. To open it again please dial 8722227 (BeeCode).</string>
   <string name="error_msg_invalid_url">Please enter a valid http:// or https:// URL</string>
+
+
+  <string name="enter_no">Enter your mobile number</string>
+  <string name="phone_hint">Enter your mobile number</string>
+  <string name="get_moving">Get moving with Bee Service</string>
+  <string name="transition_arrow">transition_arrow</string>
+  <string name="transition_tvMoving">transition_tvMoving</string>
+  <string name="transition_ivFlag">transition_ivFlag</string>
+  <string name="transition_tvCode">transition_tvCode</string>
+  <string name="transition_tvPhoneNo">transition_tvPhoneNo</string>
+  <string name="transition_llPhone">transition_llPhone</string>
+  <string name="welcome_back">Welcome back, sign in to continue</string>
+  <string name="title_activity_maps">Map</string>
 </resources>
