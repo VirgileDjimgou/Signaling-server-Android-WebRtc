@@ -80,7 +80,7 @@
 
 
         <activity
-            android:name="org.ioengine.tracker.intro.LoginWithPhone"
+            android:name="org.ioengine.tracker.intro.LoginEnterPin_Phone"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity

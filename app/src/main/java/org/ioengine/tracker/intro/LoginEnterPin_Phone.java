@@ -31,7 +31,7 @@ import butterknife.OnClick;
 
 import static android.view.Gravity.LEFT;
 
-public class LoginWithPhone extends AppCompatActivity {
+public class LoginEnterPin_Phone extends AppCompatActivity {
 
     @BindView(R.id.ivback)
     ImageView ivBack;
@@ -112,7 +112,7 @@ public class LoginWithPhone extends AppCompatActivity {
         public void onTransitionEnd(Transition transition) {
 
             ivBack.setImageAlpha(255);
-            Animation animation = AnimationUtils.loadAnimation(LoginWithPhone.this, R.anim.slide_right);
+            Animation animation = AnimationUtils.loadAnimation(LoginEnterPin_Phone.this, R.anim.slide_right);
             ivBack.startAnimation(animation);
 
         }
@@ -148,7 +148,7 @@ public class LoginWithPhone extends AppCompatActivity {
             etPhoneNo.setVisibility(View.GONE);
             etPhoneNo.setCursorVisible(false);
             etPhoneNo.setBackground(null);
-            Animation animation = AnimationUtils.loadAnimation(LoginWithPhone.this, R.anim.slide_left);
+            Animation animation = AnimationUtils.loadAnimation(LoginEnterPin_Phone.this, R.anim.slide_left);
             ivBack.startAnimation(animation);
         }
 
@@ -253,9 +253,9 @@ public class LoginWithPhone extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(LoginWithPhone.this, PasswordActivity.class);
+                Intent intent = new Intent(LoginEnterPin_Phone.this, PasswordActivity.class);
                 ActivityOptionsCompat options = ActivityOptionsCompat.
-                        makeSceneTransitionAnimation(LoginWithPhone.this);
+                        makeSceneTransitionAnimation(LoginEnterPin_Phone.this);
                 startActivity(intent, options.toBundle());
             }
         }, 1000);

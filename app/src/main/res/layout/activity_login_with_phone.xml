@@ -45,6 +45,17 @@
                 android:scaleType="centerCrop"
                 android:transitionName="@string/transition_ivFlag" />
 
+
+            <com.rilixtech.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="50dp"
+                android:background="@color/white"
+                android:layout_height="30dp"
+                android:layout_marginLeft="1dp"
+                android:layout_gravity="center_horizontal"
+                android:transitionName="@string/transition_tvPhoneNo"
+                app:ccp_defaultNameCode="CM" />
+
             <TextView
                 android:id="@+id/tvCode"
                 android:layout_width="wrap_content"

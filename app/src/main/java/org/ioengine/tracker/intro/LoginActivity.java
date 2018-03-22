@@ -2,22 +2,35 @@ package org.ioengine.tracker.intro;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.ChangeBounds;
 import android.transition.Transition;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseException;
+import com.google.firebase.FirebaseTooManyRequestsException;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
 import com.rilixtech.Country;
 import com.rilixtech.CountryCodePicker;
 
@@ -27,7 +40,7 @@ import butterknife.OnClick;
 import org.ioengine.tracker.R;
 
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity  {
 
 
     @BindView(R.id.llphone)
@@ -40,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView tvMoving;
 
     @BindView(R.id.tvPhoneNo)
-    TextView tvPhoneNo;
+    EditText tvPhoneNo;
 
     @BindView(R.id.llInfo)
     LinearLayout llInfo;
@@ -59,8 +72,34 @@ public class LoginActivity extends AppCompatActivity {
     CountryCodePicker ccpBAck;
 
 
+
+
+    EditText mPhoneNumberField, mVerificationField;
+    Button mStartButton;
+    private String phoneNumber;
+
+
+    private Button Registration_Phone;
+
+
+    private CountryCodePicker ccp;
+    public static FirebaseAuth mAuth;
+    private PhoneAuthProvider.ForceResendingToken mResendToken;
+    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
+    String mVerificationId;
+
+    private static final String TAG = "PhoneAuthActivity";
+
+    // firebase ...
+    private DatabaseReference userDB;
+    public static FirebaseUser user_Global;
+    private Context context;
+
     CountryCodePicker ccp_;
     TextView telCode;
+
+
+
 
 
     @Override
@@ -86,6 +125,49 @@ public class LoginActivity extends AppCompatActivity {
                 // tvCode.setText(ccp_.getSelectedCountryCode().toString());
             }
         });
+
+
+        // init
+
+
+
+        /*
+        mPhoneNumberField = (EditText) findViewById(R.id.tvPhoneNo);
+        mStartButton = (Button) findViewById(tech.ioengine.Login.R.id.button_start_verification);
+
+        mStartButton.setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
+        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+            @Override
+            public void onVerificationCompleted(PhoneAuthCredential credential) {
+                Log.d(TAG, "onVerificationCompleted:" + credential);
+                // signInWithPhoneAuthCredential(credential);
+            }
+
+            @Override
+            public void onVerificationFailed(FirebaseException e) {
+                Log.w(TAG, "onVerificationFailed", e);
+                if (e instanceof FirebaseAuthInvalidCredentialsException) {
+                    mPhoneNumberField.setError("Invalid phone number.");
+                } else if (e instanceof FirebaseTooManyRequestsException) {
+                    Snackbar.make(findViewById(android.R.id.content), "Quota exceeded.",
+                            Snackbar.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCodeSent(String verificationId,
+                                   PhoneAuthProvider.ForceResendingToken token) {
+                Log.d(TAG, "onCodeSent:" + verificationId);
+                mVerificationId = verificationId;
+                mResendToken = token;
+            }
+        };
+
+        context = this.getApplicationContext();
+
+*/
     }
 
     private void setupWindowAnimations() {
@@ -169,20 +251,15 @@ public class LoginActivity extends AppCompatActivity {
     @OnClick({R.id.llphone, R.id.ivFlag, R.id.tvPhoneNo})
     void startTransition() {
 
-
-
-        Intent intent = new Intent(LoginActivity.this, LoginWithPhone.class);
+        // send  Request to Firebase  ...
+        Intent intent = new Intent(LoginActivity.this, LoginEnterPin_Phone.class);
         intent.putExtra("CodePhone", ccp_.getSelectedCountryCode().toString());
-
-
         Pair<View, String> p1 = Pair.create((View) ivBack, getString(R.string.transition_arrow));
         Pair<View, String> p2 = Pair.create((View) ivFlag, getString(R.string.transition_ivFlag));
         Pair<View, String> p3 = Pair.create((View) tvCode, getString(R.string.transition_tvCode));
         Pair<View, String> p4 = Pair.create((View) tvPhoneNo, getString(R.string.transition_tvPhoneNo));
         Pair<View, String> p5 = Pair.create((View) llphone, getString(R.string.transition_llPhone));
         Pair<View, String> p6 = Pair.create((View) ccpBAck, getString(R.string.transition_tvPhoneNo));
-
-
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, p1, p2, p3, p4, p5 , p6);
         startActivity(intent, options.toBundle());
 
