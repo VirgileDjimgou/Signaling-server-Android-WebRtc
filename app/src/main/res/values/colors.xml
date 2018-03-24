@@ -13,4 +13,126 @@
     <color name="black">#000</color>
     <color name="grey">#d3d3d3</color>
 
+
+
+    <color name="colorIndivateTab">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorCardView">#f7f7f7</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_500">#a4a4a4</color>
+    <color name="grey_800">#212121</color>
+
+    <color name="leku_app_blue">#3DA8E1</color>
+    <color name="leku_app_strong_blue">#053B58</color>
+
+    <color name="secondary_text">#727272</color>
+    <color name="colorAccent2">#9cacbf</color>
+    <color name="tabIndicator">#d2d7de</color>
+
+    <color name="etherReceived">#d22a8031</color>
+    <color name="etherSpent">#d2a63f40</color>
+    <color name="normalBlack">#222222</color>
+    <color name="unconfirmed">#b6b6b6</color>
+    <color name="unconfirmedNew">#a3a3a3</color>
+
+    <color name="color_green">#14808d</color>
+    <color name="color_brown">#343838</color>
+    <color name="divider_grey">#e4e4e5</color>
+
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+
+
+    <!-- Light colors -->
+    <color name="colorPrimary_light">#FFE0B2</color>
+    <color name="colorPrimaryDark_light">#FFA726</color>
+    <color name="colorAccent_light">#424242</color>
+    <color name="background_light">#FFF3E0</color>
+
+    <!-- Dark colors -->
+    <color name="colorPrimary_dark">#2E7D32</color>
+    <color name="colorPrimaryDark_dark">#1B5E20</color>
+    <color name="colorAccent_dark">#FAFAFA</color>
+    <color name="background_dark">#263238</color>
+
+
+    <color name="default_screen_bg">#f9f9f9</color>
+    <color name="rounded_container_bg">#222222</color>
+    <color name="rounded_container_border">#3b3f44</color>
+    <color name="light_gray_header_color">#646663</color>
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+
+
+    <color name="theme_primary">#8BC34A</color>
+    <color name="theme_primary_dark">#689F38</color>
+    <color name="theme_primary_light">#DCEDC8</color>
+    <color name="theme_primary_accent">#CDDC39</color>
+    <color name="theme_primary_text_icons">#212121</color>
+    <color name="theme_primary_text">#212121</color>
+    <color name="theme_primary_secondary_text">#727272</color>
+    <color name="theme_primary_divider">#B6B6B6</color>
+
+    <color name="disabled">#b6b6b6</color>
+    <color name="text_attention">#ff5252</color>
+
+    <color name="material_dialog_background">@android:color/white</color>
+    <color name="material_dialog_content">@color/theme_primary_secondary_text</color>
+    <color name="material_dialog_title">@color/theme_primary_secondary_text</color>
+    <color name="material_dialog_buttons">@color/theme_primary</color>
+
+    <color name="refresh_progress_1">@color/theme_primary_accent</color>
+    <color name="refresh_progress_2">@color/theme_primary_dark</color>
+    <color name="refresh_progress_3">@color/theme_primary</color>
+
+
+
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+
+
+    <color name="gomalan_bule_bg">#00b1c7</color>
+    <color name="gomalan_green_bg">#19c594</color>
+    <color name="gomalon_dark_blue">#0097a9</color>
+
+
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#EEEEEE</color>
+    <color name="navigationBarColor">#44424242</color>
+
+    <color name="white_opaque">#FFFFFFFF</color>
+    <color name="white_transparent">#99FFFFFF</color>
+    <color name="filter_bg">#eeffffff</color>
+    <color name="red">#990000</color>
+    <color name="green">#009900</color>
+    <color name="blue">#000099</color>
+    <color name="orange">#FF9900</color>
+    <color name="yellow">#ffbf00</color>
+    <color name="filter_red">#ff5240</color>
+    <color name="header_color">#080808</color>
+    <color name="setup_store_bg">#787878</color>
+    <color name="g_bule_bg">#00b1c7</color>
+    <color name="g_green_bg">#19c594</color>
+    <color name="g_dark_blue">#0097a9</color>
+    <color name="featured_dots_active">#9D9D9D</color>
+    <color name="purple">#8e76c6</color>
+
+
+    <color name="primary_text">#212121</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
 </resources>

@@ -89,6 +89,16 @@
             android:windowSoftInputMode="adjustResize" />
 
 
+
+        <activity
+            android:name="org.ioengine.tracker.intro.PhoneAuthActivity"
+            android:theme="@style/AppTheme" />
+
+
+        <activity
+            android:name="org.ioengine.tracker.intro.PhoneRegistrationActivity"
+            android:theme="@style/AppTheme" />
+
         <activity
             android:name="org.ioengine.tracker.intro.MapActivity"
             android:theme="@style/AppTheme" />

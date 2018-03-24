@@ -253,7 +253,7 @@ public class LoginEnterPin_Phone extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(LoginEnterPin_Phone.this, PasswordActivity.class);
+                Intent intent = new Intent(LoginEnterPin_Phone.this, PhoneAuthActivity.class);
                 ActivityOptionsCompat options = ActivityOptionsCompat.
                         makeSceneTransitionAnimation(LoginEnterPin_Phone.this);
                 startActivity(intent, options.toBundle());

@@ -52,9 +52,6 @@ public class LoginActivity extends AppCompatActivity  {
     @BindView(R.id.tvMoving)
     TextView tvMoving;
 
-    @BindView(R.id.tvPhoneNo)
-    EditText tvPhoneNo;
-
     @BindView(R.id.llInfo)
     LinearLayout llInfo;
 
@@ -95,8 +92,8 @@ public class LoginActivity extends AppCompatActivity  {
     public static FirebaseUser user_Global;
     private Context context;
 
-    CountryCodePicker ccp_;
     TextView telCode;
+    Button continuebutton;
 
 
 
@@ -115,17 +112,7 @@ public class LoginActivity extends AppCompatActivity  {
         int height = displayMetrics.heightPixels;
         uber.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (0.65 * height)));
         ivBack.setImageAlpha(0);
-        telCode = (TextView) findViewById(R.id.tvCode);
-
-        ccp_ = (CountryCodePicker) findViewById(R.id.ccp);
-        ccp_.setOnCountryChangeListener(new CountryCodePicker.OnCountryChangeListener() {
-            @Override
-            public void onCountrySelected(Country selectedCountry) {
-                Toast.makeText(getApplicationContext(), "Updated " + selectedCountry.getName(), Toast.LENGTH_SHORT).show();
-                // tvCode.setText(ccp_.getSelectedCountryCode().toString());
-            }
-        });
-
+        continuebutton = (Button) findViewById(R.id.continuebut);
 
         // init
 
@@ -252,8 +239,7 @@ public class LoginActivity extends AppCompatActivity  {
     void startTransition() {
 
         // send  Request to Firebase  ...
-        Intent intent = new Intent(LoginActivity.this, LoginEnterPin_Phone.class);
-        intent.putExtra("CodePhone", ccp_.getSelectedCountryCode().toString());
+        Intent intent = new Intent(LoginActivity.this, PhoneAuthActivity.class);
         Pair<View, String> p1 = Pair.create((View) ivBack, getString(R.string.transition_arrow));
         Pair<View, String> p2 = Pair.create((View) ivFlag, getString(R.string.transition_ivFlag));
         Pair<View, String> p3 = Pair.create((View) tvCode, getString(R.string.transition_tvCode));

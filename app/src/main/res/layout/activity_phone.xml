@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray_header_color">
+
+
+    <LinearLayout
+        android:id="@+id/phone_auth_fields"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="3.0">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Phone Authentification"
+                android:textColor="@color/grey_100"
+                android:textColorHint="@color/grey_100"
+                android:layout_gravity="top|center_horizontal"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:ccp_defaultNameCode="DE" />
+
+
+                <EditText
+                    android:id="@+id/field_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_phone_number"
+                    android:inputType="phone"
+                    android:layout_gravity="center_horizontal"
+                    android:textColorHint="#ff5252"
+                    android:textColor="#ff5252" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/button_start_verification"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/start_phone_auth"
+                android:textColor="@color/button_text" />
+
+
+            <EditText
+                android:id="@+id/field_verification_code"
+                android:layout_width="210dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:background="@color/white"
+                android:hint="@string/hint_verification_code"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/black"
+                android:textColorHint="@color/black" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

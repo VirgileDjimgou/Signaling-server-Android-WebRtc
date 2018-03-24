@@ -56,5 +56,408 @@
   <string name="transition_tvPhoneNo">transition_tvPhoneNo</string>
   <string name="transition_llPhone">transition_llPhone</string>
   <string name="welcome_back">Welcome back, sign in to continue</string>
+
+  <!-- Navigation Drawer menu labels -->
+  <string name="nav_home">Home</string>
+  <string name="nav_profil">Profil</string>
+  <string name="nav_history">History</string>
+  <string name="nav_notifications">Notifications/Promo</string>
+  <string name="nav_share">Share</string>
+  <string name="nav_rate">Rate this App</string>
+  <string name="nav_settings">Adv. Settings</string>
+  <string name="nav_chat">Zone Chat</string>
+  <string name="nav_about">About Us</string>
+  <string name="nav_sign_out">logout</string>
+  <string name="share_intent_title">Share Whatsapp</string>
+  <string name="share_whatsapp_not_instaled">whatsapp not installed</string>
+
+
+  <string name="pick_contacts">Pick contact(s)</string>
+  <string name="picked_contacts">Picked contact(s)</string>
+
+  <string name="permission_denied">Permission denied</string>
+  <string name="permission_denied_contacts">The contact picker won\'t work without this permission. Are you sure you want to deny this permission?</string>
+  <string name="permission_deny">Deny</string>
+  <string name="permission_retry">Re-try</string>
+
+  <string name="light_theme">Light Theme</string>
+  <string name="dark_theme">Dark Theme</string>
+
+
+  <string name="action_add_favourite">Add to Favourites</string>
+  <string name="action_play_next">delete</string>
+  <string name="backdrop_title">xxTTxx</string>
+  <string name="backdrop_subtitle">subtitle</string>
+
+
+  <string name="action_settings">Settings</string>
+  <string name="promo_titel">Bee~#> Promotions</string>
+  <string name="delete">DELETE</string>
+
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="openDrawer">open_drawer</string>
+  <string name="closeDrawer">close_drawer</string>
+
+
+
+
+  <!-- Toolbar titles when navigation menu item is selected -->
+  <string-array name="nav_item_activity_titles">
+    <item>Home</item>
+    <item>Profil</item>
+    <item>History</item>
+    <item>Notifications</item>
+    <item>Share</item>
+    <item>Zone Chat</item>
+  </string-array>
+
+  <string name="activity_title_about_us">Über uns</string>
+  <string name="activity_title_privacy_policy">Privacy Policy</string>
+  <string name="action_clear_all">Clear All</string>
+  <string name="action_logout">Logout</string>
+  <string name="action_mark_all_read">Mark All as Read</string>
+  <string name="privacy_policy">Privacy Policy</string>
+
+
+  <string name="title_activity_details">Contact Details</string>
+
+  <string name="transition_name_name">transition:NAME</string>
+  <string name="transition_name_circle">transition:CIRCLE</string>
+  <string name="transition_name_phone">transition:PHONE</string>
+
+
+  <!--###new import fusion ###-->
+  <string name="about">About</string>
+  <string name="login_success">login success</string>
+  <string name="login">LOGIN</string>
+  <string name="Username">Email</string>
+  <string name="Password">Password</string>
+  <string name="forgot_your_password">Forgot your password ?</string>
+  <string name="go">GO</string>
+  <string name="repeat_password">Repeat Password</string>
+  <string name="next">NEXT</string>
+  <string name="register">REGISTER</string>
+
+  <string name="hint_username">Enter a new username</string>
+  <string name="hint_email_reset">Enter your email</string>
+  <string name="enter_group_name">Enter group name</string>
+
+
+
+  <string name="sign_out">Sign Out</string>
+  <string name="hint_phone_number">Enter Phone Number</string>
+  <string name="hint_verification_code">Verification Code</string>
+  <string name="start_phone_auth">Start</string>
+  <string name="verify_phone_auth">Verify</string>
+  <string name="resend_phone_auth">Resend</string>
+  <string name="news">News and Offers</string>
+
+
+
+  <string name="app_intro_text">Welcome to Bee Wallet Mananger -Before starting, please take some time to read through our terms of service.</string>
+  <string name="app_intro_title">Bee Wallet Manager</string>
+  <string name="app_intro_please_agree">Please read and agree to the terms of service before proceeding</string>
+  <string name="app_intro_iagree">I agree to terms of service</string>
+  <string name="fragment_send_ether_amount">Amount</string>
+  <string name="fragment_send_cheaper">Cheaper</string>
+  <string name="fragment_send_faster">Faster</string>
+  <string name="fragment_send_total">Total</string>
+  <string name="fragment_send_send_button">Send</string>
+  <string name="fragment_recipient_hint_address">Address</string>
+  <string name="fragment_recipient_continue">Continue</string>
+  <string name="fragment_detail_add_sharing">Address Sharing</string>
+  <string name="fragment_detail_share_button">Share</string>
+  <string name="walletgen_title">Generate Wallet</string>
+  <string name="request_ether_title">Request </string>
+  <string name="qr_scan_title">QR Address</string>
+  <string name="activity_send_title">Transaction</string>
+  <string name="last_24_hours">Last 24 Hours</string>
+  <string name="last_7_days">Last 7 Days</string>
+  <string name="last_30_days">Last 30 Days</string>
+  <string name="last_year">Last Year</string>
+  <string name="err_no_con">No internet connection</string>
+  <string name="wallet_menu_title">Wallet Settings</string>
+  <string name="wallet_menu_changename">Change Wallet Name</string>
+  <string name="wallet_menu_copyadd">Address to Clipboard</string>
+  <string name="wallet_menu_export">Export Wallet</string>
+  <string name="wallet_menu_delete">Delete Wallet</string>
+  <string name="wallet_suc_exported">Wallet successfully exported</string>
+  <string name="wallet_no_permission">Please grant write permission to export wallets</string>
+  <string name="wallet_one_at_a_time">Not So Fast</string>
+  <string name="wallet_one_at_a_time_text">We are currently generating a wallet for you, you can see the progress in your notification bar. Don\'t worry, we will notify you as soon as your wallet generation is finished :-) If you really wish to generate another one please wait for the current wallet to be completed first.</string>
+  <string name="button_ok">OK</string>
+  <string name="wallet_removal_title">ATTENTION: Wallet Removal</string>
+  <string name="wallet_removal_sure">Are you sure you want to delete your watch only wallet?</string>
+  <string name="wallet_removal_privkey">! THIS IS A WALLET WITH A PRIVATE KEY ! IF YOU HAVE NO BACKUP AND CONTINUE ALL YOUR Reserve ON THAT WALLET WILL BE LOST FOR EVER! ARE YOU SURE YOU WANT TO PROCEED? WALLET ADDRESS:</string>
+  <string name="wallet_removal_last_warning">ARE YOU SURE? WALLET AND ALL COINS / TOKEN ON IT ARE GOING TO GET PERMANENTLY REMOVED. THIS IS THE LAST WARNING FOR WALLET:</string>
+  <string name="button_yes">YES</string>
+  <string name="button_no">NO</string>
+  <string name="name_your_wallet">Name Your Wallet</string>
+  <string name="button_cancel">Cancel</string>
+  <string name="name_other_address">Name Other Address</string>
+  <string name="trans_menu_title">Transaction Settings</string>
+  <string name="trans_menu_changename">Change Address Name</string>
+  <string name="trans_menu_viewreceiver">View Receiver Address</string>
+  <string name="trans_menu_openinb">Open in Browser</string>
+  <string name="trans_no_trans_found">No transactions found for this address.</string>
+  <string name="err_send_not_enough_ether">Not enough Money on that Address</string>
+  <string name="err_send_invalidamount">Invalid Amount</string>
+  <string name="err_send_noreceiver">No receiver specified</string>
+  <string name="err_send_noamount">No amount specified</string>
+  <string name="name_your_address">Name Your Address</string>
+  <string name="name_this_address">Name This Address</string>
+  <string name="addressbook_menu_title">Addressbook Settings</string>
+  <string name="addressbook_menu_remove">Remove</string>
+  <string name="import_title">Import Wallet</string>
+  <string name="import_button">Import</string>
+  <string name="main_grant_permission_export">Please grant write permission to export Wallets</string>
+  <string name="main_grant_permission_import">Please grant read permission to import Wallets</string>
+  <string name="dialog_watch_only_title">Lookup Address</string>
+  <string name="dialog_importing_wallets_title">Importing Wallets?</string>
+  <string name="dialog_importing_wallets_text">We have detected %1$d new wallet%2$s in our Bee Wallet folder. Would you like to import: %3$s</string>
+  <string name="you_ordered">characteristic of the place</string>
+  <string name="dialog_ex_nofull_text">Watch only wallets can not be exported.</string>
+  <string name="dialog_exporting_title">Exporting your Wallet</string>
+  <string name="dialog_exporting_text">A copy of your  wallet Information will be placed inside the folder \"BeeWallet\" in the root directory of your Android phone. Please note that other applications that run on your device can technically access any wallets that you have exported. Due to this, we highly recommend erasing all exported wallets from the Bee Wallet manager folder as soon as you have finished backing them up.</string>
+  <string name="dialog_nofullwallet">No Full Wallet</string>
+  <string name="dialog_nofullwallet_text">In order to send funds you need a full wallet with a private key. Please generate or import one first.</string>
+  <string name="dialog_no_wallets">No Wallets</string>
+  <string name="dialog_no_wallets_text">In order to request funds you need a wallet or a watch only address.</string>
+  <string name="dialog_no_wallets_found">No Wallets Found</string>
+  <string name="dialog_no_wallets_found_text">Please place the wallet you want to import inside the Bee Wallet folder and make sure it is correctly named. When importing from Mist or other desktop client you don\'t have to rename your wallet.</string>
+  <string name="notification_ticker">Incoming  Transaction…</string>
+  <string name="notification_transfersuc">Transfer successful</string>
+  <string name="notification_transferfail">Transfer Failed</string>
+  <string name="notification_transferingticker">Transferring Money…</string>
+  <string name="notification_transfering_title">Transferring Money</string>
+  <string name="notification_might_take_a_minute">This might take a minute</string>
+  <string name="notification_wallgen_maytake">This may take a couple minutes</string>
+  <string name="notification_wallgen_title">Generating Wallet…</string>
+  <string name="notification_wallimp_title">Importing Wallet…</string>
+  <string name="notification_wallgen_finished">Wallet Creation Finished!</string>
+  <string name="notification_wallimp_finished">Wallet Import Finished!</string>
+  <string name="notification_click_to_view">Click to view</string>
+  <string name="ether_and_token"> Token</string>
+  <string name="prefs_lock_with_pw">Lock with Password</string>
+  <string name="prefs_lock_with_pw_sum">If enabled Bee Wallet will ask you for a password before launching the app</string>
+  <string name="prefs_set_pw">Set Password</string>
+  <string name="prefs_set_pw_sum">Specify your login pattern</string>
+  <string name="prefs_cat_security">Security</string>
+  <string name="fab_sendether_from">Send Money From</string>
+  <string name="fab_sendether_to">Send Money To</string>
+  <string name="open_in_browser">Open in Browser</string>
+  <string name="tx_cost">TX Cost</string>
+  <string name="gas_used">Gas Used</string>
+  <string name="gas_price">Gas Price</string>
+  <string name="nonce">Nonce</string>
+  <string name="block_height">Block Height</string>
+  <string name="timestamp">Timestamp</string>
+  <string name="wallet_menu_share">Share Address</string>
+  <string name="wallet_menu_action_copied_to_clipboard">Copied to Clipboard</string>
+  <string name="created">Created</string>
+  <string name="digits">Digits</string>
+  <string name="holders">Holders</string>
+  <string name="market_cap">Market Cap</string>
+  <string name="price">Price</string>
+  <string name="total_supply">Total Supply</string>
+  <string name="token">Token</string>
+  <string name="gas_limit">Gas Limit:</string>
+  <string name="optional_data_as_hex">Optional data as hex</string>
+  <string name="data">Data:</string>
+  <string name="send_expert_warning">You can add extra data to send along with your transaction. If you don\'t know what this is then don\'t touch it or bad things may happen!</string>
+  <string name="expert_mode_optional">Expert Mode (Optional)</string>
+  <string name="transaction_failed">Transaction failed</string>
+  <string name="reddit">Bee Wallet  Subreddit</string>
+  <string name="add">Add</string>
+  <string name="show">Show</string>
+  <string name="setting_erc_qr_encoding">Use ERC-67 QR Encoding</string>
+  <string name="setting_cat_advanced">Advanced</string>
+  <string name="password_in_clear_text">Show Password in clear text</string>
+
+
+  <string name="action_gastro">Food</string>
+  <string name="action_shopping">Shopping</string>
+  <string name="action_favorites">Favorites</string>
+  <string name="action_mapview">Map overview</string>
+  <string name="action_listview">List view</string>
+  <string name="action_about">About</string>
+  <string name="action_filter">Filter</string>
+  <string name="action_menu_search">Search</string>
+  <string name="action_rate_app">Rate app</string>
+
+  <string name="km_string">km</string>
+  <string name="mi_string">mi</string>
+
+  <string name="please_wait">Please wait&#8230;</string>
+  <string name="retrieving_data">Retrieving data.</string>
+  <string name="units">Units</string>
+  <string name="units_summaryOn">Use metric system.</string>
+  <string name="units_summaryOff">Use imperial system.</string>
+  <string name="guide">Guide</string>
+  <string name="error">Error</string>
+  <string name="no_gps_data">No GPS data received. Show list in default order.</string>
+  <string name="insert_error_report">Please insert error report here:</string>
+  <string name="something_went_wrong">Something went wrong. But no worries, a report has been sent to help fix the issue.</string>
+
+  <string name="about_version">&lt;b>%1$s&lt;/b>&lt;br>Version: %2$s</string>
+  <string name="about_licenses">Open Source Licenses</string>
+  <string name="about_credits">Credits</string>
+  <string name="facebook_app_id">419402341818287</string>
+
+
+
+
+  <string name="title_activity_driver_map">Map</string>
+  <string name="title_activity_main2">Main2Activity</string>
+
+
+  <string name="hello_world">Hello world!</string>
+  <string name="button_login">Login with Email</string>
+  <string name="button_signup">Sign Up with Email</string>
+  <string name="button_confirm_login">Confirm Login</string>
+  <string name="button_cancel_login">Cancel Login</string>
+  <string name="button_confirm_signup">Confirm Sign Up</string>
+  <string name="button_cancel_signup">Cancel Sign Up</string>
+  <string name="edit_username">username</string>
+  <string name="edit_password">password</string>
+  <string name="car_driver">Car-Driver</string>
+  <string name="moto_driver">Moto-Driver</string>
+
+
+  <string name="action_sign_in_short">Register</string>
+  <string name="email">Email</string>
+  <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+  <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
+  <string name="change_email">Change Email</string>
+  <string name="change_password">Change Password</string>
+  <string name="send_password_reset_email">Send Password reset email</string>
+  <string name="remove_user">Remove user</string>
+  <string name="new_pass">New Password</string>
+  <string name="title_activity_profile">Firebase</string>
+  <string name="title_activity_login">Sign in</string>
+  <string name="hint_email">Email</string>
+  <string name="hint_password">Password</string>
+  <string name="hint_name">Fullname</string>
+  <string name="btn_login">LOGIN</string>
+  <string name="btn_link_to_register">Not a member? Get registered in Firebase now!</string>
+  <string name="btn_link_to_login">Already registered. Login Me!</string>
+  <string name="title_activity_reset_password">ResetPasswordActivity</string>
+  <string name="btn_forgot_password">Forgot your password?</string>
+  <string name="btn_reset_password">Reset Password</string>
+  <string name="btn_back"><![CDATA[<< Back]]></string>
+  <string name="hint_new_email">New Email</string>
+  <string name="btn_change">Change</string>
+  <string name="btn_send">Send</string>
+  <string name="btn_remove">Remove</string>
+  <string name="btn_sign_out">Sign Out</string>
+  <string name="lbl_forgot_password">Forgot password?</string>
+  <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+
+
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
   <string name="title_activity_maps">Map</string>
+
+  <!--    Permissions    -->
+  <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+  <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+  <string name="permission_required_toast">Location permission is required for this demo.</string>
+  <string name="title_activity_test">Map</string>
+
+
+  <string name="btn_send_token">Send Token</string>
+  <string name="btn_send_tokens">Send Tokens</string>
+  <string name="btn_send_topic">Send Topic</string>
+  <string name="btn_show_token">Show Token</string>
+  <string name="btn_subscribe_news">Subscribe (News)</string>
+  <string name="btn_unsubscribe_news">Unsubscribe (News)</string>
+  <string name="notification_channel_id">default</string>
+  <string name="result">Something will happen here&#8230;</string>
+  <string name="subscribed">Subscribed to news topic</string>
+  <string name="unsubscribed">Unsubscribed from news topic</string>
+
+
+
+  <string name="pref_compression">Compression</string>
+  <string name="pref_repeat">Repeat Indefinitely</string>
+  <string name="load_gif">Load From File Manager</string>
+  <string name="upload_gif">Upload</string>
+  <string name="clear">Reset</string>
+  <string name="short_instructions">Add a frame with the  +  sign below.</string>
+  <string name="title_hint">Enter GIF filename, or leave blank</string>
+  <string name="pref_repeat_summary">Otherwise, run twice and stop</string>
+  <string name="pref_compression_summary">Higher quality (100) will significantly increase file size</string>
+  <string name="pref_default_title">Default GIF Filename</string>
+  <string name="pref_delay_summary">Frame switch in milliseconds</string>
+  <string name="pref_delay">Delay Between Frames</string>
+  <string name="pref_gif_category">GIF Generation</string>
+  <string name="pref_app_category">Application Information</string>
+  <string name="remove">Remove</string>
+  <string name="image_options">Image Options</string>
+  <string name="share_gif">Share</string>
+  <string name="view_activity_title">GIF Viewer</string>
+  <string name="preference_activity_title">Preferences</string>
+  <string name="instructions_activity_title">Instructions</string>
+  <string name="viewer_activity_title">Cloud Object Viewer</string>
+
+  <string name="source">Source Code</string>
+  <string name="requirements_title">Image Requirements</string>
+  <string name="title_file_size">File Sizes</string>
+  <string name="title_interface">User Interface</string>
+  <string name="app_intro">This application is a simple utility for creating and viewing GIF
+        files on an Android phone or tablet.</string>
+  <string name="user_interface">You\'ll need an external File Manager application.\nClick
+        on the plus sign on the lower right hand side
+        to add JPG images one at a time.\nIf left blank, the GIF filename will be defined by Preferences.\nClick
+        on an Image ID to view it\s preview.\nLong click an Image ID to remove it from the list.\nGIFs
+        are saved to the Gifs/ directory inside of Pictures/.\nWhen selecting a GIF from the
+        GIFs directory activity, long click an item to delete it.
+    </string>
+  <string name="requirements">Selected images must be JPG (or JPEG) format.\nThe
+        images must be the same dimensions.</string>
+  <string name="file_size">GIF file sizes will quickly get out of hand - while Fissure can
+        certainly create GIFs, it won\'t transfer them off the phone!\nIf
+        planning on sharing a GIF, try to keep it\'s compression below 85, and well below that
+        if the amount of frames exceeds 5.</string>
+  <string name="generate_btn">Generate</string>
+  <string name="title_images">GIF Frames:</string>
+  <string name="app_version_title">Application Version</string>
+  <string name="license_title">Licence</string>
+  <string name="author_title">Developer</string>
+  <string name="app_version">Fissure GIF x.x.x</string>
+  <string name="license">GPLv3</string>
+  <string name="author">Fenimore Love</string>
+  <string name="clear_all">Clear All</string>
+  <string name="refresh">Refresh</string>
+  <string name="files_activity_title">GIFs directory</string>
+  <string name="title_select">Select</string>
+  <string name="title_view">View</string>
+  <string name="title_clear">Clear</string>
+  <string name="title_instructions">Instructions</string>
+  <string name="view_gif_directory">View GIF Directory</string>
+  <string name="pref_dir_category">Directory Settings</string>
+  <string name="pref_img_load_title">Load images in directory list</string>
+  <string name="pref_img_load_summary">Too many GIFs might crash or crash the directory view</string>
+  <string name="contributors">Contributors</string>
+  <string name="contributors_list">\@Swati4star @naofum</string>
+
+
+  <string name="image_details_header">Details:</string>
+  <string name="image_preview_header">Preview:</string>
+  <string name="loading_message">Uploading image. Please wait.</string>
+
+  <string name="dialog_select_prompt">Choose a picture</string>
+  <string name="dialog_select_camera">nativ Camera</string>
+  <string name="dialog_select_multiple_photo">Take multiple Photos</string>
+  <string name="dialog_select_multiple_detect">multiple processing</string>
+
+  <string name="custom_title">maximun 5 photos ! </string>
+  <string name="agree"> Cool ! </string>
+  <string name="content">Bee Catographer Version 1.0. BeeTech Gmbh</string>
+
+
 </resources>
