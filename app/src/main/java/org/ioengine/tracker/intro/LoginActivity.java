@@ -55,20 +55,6 @@ public class LoginActivity extends AppCompatActivity  {
     @BindView(R.id.llInfo)
     LinearLayout llInfo;
 
-    @BindView(R.id.ivFlag)
-    ImageView ivFlag;
-
-    @BindView(R.id.tvCode)
-    TextView tvCode;
-
-    @BindView(R.id.ivback)
-    ImageView ivBack;
-
-
-    @BindView(R.id.ccp)
-    CountryCodePicker ccpBAck;
-
-
 
 
     EditText mPhoneNumberField, mVerificationField;
@@ -111,50 +97,17 @@ public class LoginActivity extends AppCompatActivity  {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
         uber.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (0.65 * height)));
-        ivBack.setImageAlpha(0);
         continuebutton = (Button) findViewById(R.id.continuebut);
-
-        // init
-
-
-
-        /*
-        mPhoneNumberField = (EditText) findViewById(R.id.tvPhoneNo);
-        mStartButton = (Button) findViewById(tech.ioengine.Login.R.id.button_start_verification);
-
-        mStartButton.setOnClickListener(this);
-
-        mAuth = FirebaseAuth.getInstance();
-        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+        continuebutton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onVerificationCompleted(PhoneAuthCredential credential) {
-                Log.d(TAG, "onVerificationCompleted:" + credential);
-                // signInWithPhoneAuthCredential(credential);
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, PhoneAuthActivity.class);
+                startActivity(intent);
+
+
             }
+        });
 
-            @Override
-            public void onVerificationFailed(FirebaseException e) {
-                Log.w(TAG, "onVerificationFailed", e);
-                if (e instanceof FirebaseAuthInvalidCredentialsException) {
-                    mPhoneNumberField.setError("Invalid phone number.");
-                } else if (e instanceof FirebaseTooManyRequestsException) {
-                    Snackbar.make(findViewById(android.R.id.content), "Quota exceeded.",
-                            Snackbar.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onCodeSent(String verificationId,
-                                   PhoneAuthProvider.ForceResendingToken token) {
-                Log.d(TAG, "onCodeSent:" + verificationId);
-                mVerificationId = verificationId;
-                mResendToken = token;
-            }
-        };
-
-        context = this.getApplicationContext();
-
-*/
     }
 
     private void setupWindowAnimations() {
@@ -235,18 +188,13 @@ public class LoginActivity extends AppCompatActivity  {
         }
     };
 
-    @OnClick({R.id.llphone, R.id.ivFlag, R.id.tvPhoneNo})
+    @OnClick({R.id.llphone})
     void startTransition() {
 
         // send  Request to Firebase  ...
         Intent intent = new Intent(LoginActivity.this, PhoneAuthActivity.class);
-        Pair<View, String> p1 = Pair.create((View) ivBack, getString(R.string.transition_arrow));
-        Pair<View, String> p2 = Pair.create((View) ivFlag, getString(R.string.transition_ivFlag));
-        Pair<View, String> p3 = Pair.create((View) tvCode, getString(R.string.transition_tvCode));
-        Pair<View, String> p4 = Pair.create((View) tvPhoneNo, getString(R.string.transition_tvPhoneNo));
         Pair<View, String> p5 = Pair.create((View) llphone, getString(R.string.transition_llPhone));
-        Pair<View, String> p6 = Pair.create((View) ccpBAck, getString(R.string.transition_tvPhoneNo));
-        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, p1, p2, p3, p4, p5 , p6);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, p5 );
         startActivity(intent, options.toBundle());
 
 

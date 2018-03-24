@@ -2,7 +2,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fff">
+
+    android:background="@color/g_dark_blue">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +32,7 @@
                 android:layout_marginBottom="20dp"
                 android:paddingLeft="20dp"
                 android:text="@string/get_moving"
-                android:textColor="#262626"
+                android:textColor="@color/button_text"
                 android:textSize="24sp" />
 
 
@@ -47,21 +48,16 @@
 
 
 
-                <android.support.v7.widget.AppCompatButton
+                <Button
                     android:id="@+id/continuebut"
-                    android:layout_width="200dp"
-                    android:text="Connect with phone"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:id="@+id/tvCode"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:gravity="center"
-                    android:textColor="#0E0E0E"
-                    android:textSize="16sp"
-                    android:transitionName="@string/transition_tvCode" />
+                    android:background="@drawable/button"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/start_phone_auth"
+                    android:textColor="@color/button_text" />
+
 
             </LinearLayout>
 
@@ -78,13 +74,5 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/ivback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:padding="15dp"
-        android:src="@drawable/ic_arrow_back"
-        android:transitionName="@string/transition_arrow" />
 
 </FrameLayout>

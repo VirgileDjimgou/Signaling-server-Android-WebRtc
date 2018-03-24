@@ -65,7 +65,7 @@ public class PhoneRegistrationActivity extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference().child("Users").child("Customers/"+ PhoneAuthActivity.user_Global.getUid()).setValue(newUser);
                     // save User Info and continue  normaly  ... user is already registerd
                     StaticConfig.UID = PhoneAuthActivity.user_Global.getUid();
-                    Intent intent = new Intent(PhoneRegistrationActivity.this, PasswordActivity.class);
+                    Intent intent = new Intent(PhoneRegistrationActivity.this, MapActivity.class);
                     startActivity(intent);
                     PhoneRegistrationActivity.this.finish();
 

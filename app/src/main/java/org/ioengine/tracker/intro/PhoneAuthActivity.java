@@ -86,16 +86,6 @@ public class PhoneAuthActivity extends AppCompatActivity implements
         mPhoneNumberField = (EditText) findViewById(R.id.field_phone_number);
         mVerificationField = (EditText) findViewById(R.id.field_verification_code);
         mStartButton = (Button) findViewById(R.id.button_start_verification);
-        Registration_Phone = (Button) findViewById(R.id.button_register_with_phone);
-        Registration_Phone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PhoneAuthActivity.this, PhoneRegistrationActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
 
         ccp = (CountryCodePicker) findViewById(R.id.ccp);
         ccp.setOnCountryChangeListener(new CountryCodePicker.OnCountryChangeListener() {
@@ -174,7 +164,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements
                                                 // save User Info and continue  normaly  ... user is already registerd
                                                 StaticConfig.UID = user_Global.getUid();
                                                 saveUserInfo();
-                                                Intent intent = new Intent(PhoneAuthActivity.this, PasswordActivity.class);
+                                                Intent intent = new Intent(PhoneAuthActivity.this, MapActivity.class);
                                                 startActivity(intent);
                                                 PhoneAuthActivity.this.finish();
                                             }else{
@@ -329,7 +319,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements
 
                             // User is signed in
 
-                            startActivity(new Intent(PhoneAuthActivity.this, PasswordActivity.class));
+                            startActivity(new Intent(PhoneAuthActivity.this, MapActivity.class));
                             finish();
 
                         }

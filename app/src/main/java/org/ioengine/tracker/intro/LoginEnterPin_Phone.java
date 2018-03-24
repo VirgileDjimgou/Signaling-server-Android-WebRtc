@@ -42,9 +42,6 @@ public class LoginEnterPin_Phone extends AppCompatActivity {
     @BindView(R.id.tvMoving)
     TextView tvMoving;
 
-    @BindView(R.id.ivFlag)
-    ImageView ivFlag;
-
     @BindView(R.id.tvCode)
     TextView tvCode;
 
@@ -143,7 +140,6 @@ public class LoginEnterPin_Phone extends AppCompatActivity {
             imm.hideSoftInputFromWindow(etPhoneNo.getWindowToken(), 0);
             tvMoving.setText(null);
             tvMoving.setHint(getString(R.string.enter_no));
-            ivFlag.setImageAlpha(0);
             tvCode.setAlpha(0);
             etPhoneNo.setVisibility(View.GONE);
             etPhoneNo.setCursorVisible(false);

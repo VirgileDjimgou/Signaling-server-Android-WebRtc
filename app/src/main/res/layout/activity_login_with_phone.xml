@@ -13,18 +13,6 @@
         android:orientation="vertical"
         android:transitionName="@string/transition_llPhone">
 
-        <TextView
-            android:id="@+id/tvMoving"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:hint="sdfsdfdsf"
-            android:text="@string/enter_no"
-            android:textColor="#262626"
-            android:textColorHint="#DADBDF"
-            android:textSize="18sp"
-            android:transitionName="@string/transition_tvPhoneNo" />
 
 
         <LinearLayout
@@ -37,24 +25,6 @@
             android:orientation="horizontal"
             android:paddingLeft="20dp">
 
-            <ImageView
-                android:id="@+id/ivFlag"
-                android:layout_width="1dp"
-                android:layout_height="1dp"
-                android:layout_marginEnd="10dp"
-                android:scaleType="centerCrop"
-                android:transitionName="@string/transition_ivFlag" />
-
-
-            <com.rilixtech.CountryCodePicker
-                android:id="@+id/ccp"
-                android:layout_width="50dp"
-                android:background="@color/white"
-                android:layout_height="30dp"
-                android:layout_marginLeft="1dp"
-                android:layout_gravity="center_horizontal"
-                android:transitionName="@string/transition_tvPhoneNo"
-                app:ccp_defaultNameCode="CM" />
 
             <TextView
                 android:id="@+id/tvCode"
