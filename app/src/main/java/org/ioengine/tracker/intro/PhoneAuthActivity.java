@@ -46,7 +46,6 @@ import org.ioengine.tracker.intro.data.StaticConfig;
 import org.ioengine.tracker.intro.model.User;
 import org.ioengine.tracker.intro.service.ServiceUtils;
 
-
 /**
  * Created by Djimgou Patrick
  * Created on 09-oct-17.
@@ -58,11 +57,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements
     EditText mPhoneNumberField, mVerificationField;
     Button mStartButton;
     private String phoneNumber;
-
-
     private Button Registration_Phone;
-
-
     private CountryCodePicker ccp;
     public static FirebaseAuth mAuth;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
@@ -75,8 +70,6 @@ public class PhoneAuthActivity extends AppCompatActivity implements
     private DatabaseReference userDB;
     public static FirebaseUser user_Global;
     private Context context;
-
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -193,11 +186,6 @@ public class PhoneAuthActivity extends AppCompatActivity implements
                                     Toast.makeText(PhoneAuthActivity.this, databaseError.toString() , Toast.LENGTH_LONG).show();
                                 }
                             });
-
-
-
-
-
                             // startActivity(new Intent(PhoneAuthActivity.this, SplaschScreen.class));
                             // finish();
                         } else {
