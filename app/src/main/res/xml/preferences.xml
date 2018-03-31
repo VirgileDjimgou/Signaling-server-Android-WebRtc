@@ -10,9 +10,6 @@
         android:switchTextOn="@string/settings_status_on"
         android:title="@string/settings_status_title" />
 
-    <EditTextPreference
-        android:key="id"
-        android:title="@string/settings_id_title" />
 
     <EditTextPreference
         android:defaultValue="@string/settings_url_default_value"
@@ -48,5 +45,10 @@
         android:numeric="integer"
         android:summary="@string/settings_angle_summary"
         android:title="@string/settings_angle_title" />
+
+
+    <EditTextPreference
+        android:key="id"
+        android:title="@string/settings_id_title" />
 
 </PreferenceScreen>

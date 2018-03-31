@@ -4,7 +4,9 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ArgbEvaluator;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.ViewPager;
@@ -13,10 +15,12 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.animation.AccelerateInterpolator;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +31,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import org.ioengine.tracker.MainActivity;
+import org.ioengine.tracker.MainFragment;
 import org.ioengine.tracker.R;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,7 +53,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MapActivity extends BaseActivity {
+public class MapActivity extends BaseActivity  {
 
     @BindView(R.id.rootFrame)
     FrameLayout rootFrame;
@@ -71,6 +76,11 @@ public class MapActivity extends BaseActivity {
     ArgbEvaluator argbEvaluator;
 
     private LatLng destination;
+    public static TextView DriverId ;
+    public static Button Status;
+    private SharedPreferences preferences;
+    private String device = "";
+    private Boolean actual_status ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,10 +88,30 @@ public class MapActivity extends BaseActivity {
         setContentView(R.layout.activity_map);
         ButterKnife.bind(this);
 
+        // init
+        preferences = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
+        device = preferences.getString(MainFragment.KEY_DEVICE, this.getApplicationContext()
+                .getString(R.string.settings_url_default_value));
+        // initPreferences();
+        DriverId = (TextView)findViewById(R.id.id_driver);
+        Status = (Button)findViewById(R.id.status);
+        Status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MapActivity.this, MainActivity.class);
+                ActivityOptionsCompat options = ActivityOptionsCompat.
+                        makeSceneTransitionAnimation(MapActivity.this);
+                startActivity(intent, options.toBundle());
+
+            }
+        });
+
+        DriverId.setText(device);
+        Toast.makeText(this, device, Toast.LENGTH_SHORT).show();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(MapActivity.this);
-
         argbEvaluator = new ArgbEvaluator();
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -170,12 +200,13 @@ public class MapActivity extends BaseActivity {
     void showViewPagerWithTransition() {
 
 
+        /*
 
         Intent intent = new Intent(MapActivity.this, MainActivity.class);
         ActivityOptionsCompat options = ActivityOptionsCompat.
                 makeSceneTransitionAnimation(MapActivity.this);
         startActivity(intent, options.toBundle());
-        /*
+        */
 
         TransitionManager.beginDelayedTransition(rootFrame);
         viewPager.setVisibility(View.VISIBLE);
@@ -184,7 +215,6 @@ public class MapActivity extends BaseActivity {
 
         mMap.setPadding(0, 0, 0, viewPager.getHeight());
 
-        */
 
     }
 
@@ -196,31 +226,39 @@ public class MapActivity extends BaseActivity {
 
     void startRevealAnimation() {
 
-        int cx = rootFrame.getMeasuredWidth() / 2;
-        int cy = rootFrame.getMeasuredHeight() / 2;
+        try{
 
-        Animator anim =
-                ViewAnimationUtils.createCircularReveal(rootll, cx, cy, 50, rootFrame.getWidth());
 
-        anim.setDuration(500);
-        anim.setInterpolator(new AccelerateInterpolator(2));
-        anim.addListener(new AnimatorListenerAdapter() {
+            int cx = rootFrame.getMeasuredWidth() / 2;
+            int cy = rootFrame.getMeasuredHeight() / 2;
 
-            @Override
-            public void onAnimationStart(Animator animation) {
-                super.onAnimationStart(animation);
-            }
+            Animator anim =
+                    ViewAnimationUtils.createCircularReveal(rootll, cx, cy, 50, rootFrame.getWidth());
 
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
+            anim.setDuration(500);
+            anim.setInterpolator(new AccelerateInterpolator(2));
+            anim.addListener(new AnimatorListenerAdapter() {
 
-                rlWhere.setVisibility(View.VISIBLE);
-                ivHome.setVisibility(View.VISIBLE);
-            }
-        });
+                @Override
+                public void onAnimationStart(Animator animation) {
+                    super.onAnimationStart(animation);
+                }
 
-        anim.start();
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    super.onAnimationEnd(animation);
+
+                    rlWhere.setVisibility(View.VISIBLE);
+                    ivHome.setVisibility(View.VISIBLE);
+                }
+            });
+
+            anim.start();
+
+        }catch (Exception ex ){
+            ex.printStackTrace();
+        }
+
     }
 
 

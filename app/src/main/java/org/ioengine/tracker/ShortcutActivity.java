@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.mapzen.android.lost.api.LocationServices;
 import com.mapzen.android.lost.api.LostApiClient;
 
+import org.ioengine.tracker.intro.MapActivity;
+
 public class ShortcutActivity extends AppCompatActivity implements LostApiClient.ConnectionCallbacks {
 
     public static final String EXTRA_ACTION = "action";
@@ -114,7 +116,12 @@ public class ShortcutActivity extends AppCompatActivity implements LostApiClient
                 public void onComplete(boolean success) {
                     if (success) {
                         Toast.makeText(ShortcutActivity.this, R.string.status_send_success, Toast.LENGTH_SHORT).show();
+                        MapActivity.Status.setBackgroundColor(getResources().getColor(R.color.green));
+
+                        MapActivity.Status.setText("you are online");
                     } else {
+                        MapActivity.Status.setBackgroundColor(getResources().getColor(R.color.red));
+                        MapActivity.Status.setText("you are offline !");
                         Toast.makeText(ShortcutActivity.this, R.string.status_send_fail, Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -122,6 +129,9 @@ public class ShortcutActivity extends AppCompatActivity implements LostApiClient
 
         } else {
             Toast.makeText(this, R.string.status_send_fail, Toast.LENGTH_SHORT).show();
+            MapActivity.Status.setBackgroundColor(getResources().getColor(R.color.red));
+            MapActivity.Status.setText("you are offline !");
+
         }
 
         apiClient.disconnect();

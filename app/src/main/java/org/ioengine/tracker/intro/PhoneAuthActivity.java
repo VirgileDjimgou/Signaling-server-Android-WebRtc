@@ -163,7 +163,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements
                                             }else{
 
                                                 // start with the registration prozess...
-                                                Toast.makeText(context , "Start Registration ... " ,Toast.LENGTH_LONG ).show();
+                                                // Toast.makeText(context , "Start Registration ... " ,Toast.LENGTH_LONG ).show();
                                                 Intent intent = new Intent(PhoneAuthActivity.this, PhoneRegistrationActivity.class);
                                                 startActivity(intent);
                                                 PhoneAuthActivity.this.finish();
@@ -173,7 +173,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements
 
 
                                         }catch(Exception ex){
-                                            Toast.makeText(PhoneAuthActivity.this, ex.toString() , Toast.LENGTH_LONG).show();
+                                            // Toast.makeText(PhoneAuthActivity.this, ex.toString() , Toast.LENGTH_LONG).show();
                                             ex.printStackTrace();
                                         }
 
@@ -264,7 +264,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements
         String ContryCode  = ccp.getSelectedCountryCode().toString();
         this.phoneNumber = mPhoneNumberField.getText().toString();
 
-        Toast.makeText(getApplicationContext(), "Phone number ist : " + ContryCode+this.phoneNumber, Toast.LENGTH_LONG).show();
+        // Toast.makeText(getApplicationContext(), "Phone number ist : " + ContryCode+this.phoneNumber, Toast.LENGTH_LONG).show();
         if (TextUtils.isEmpty(phoneNumber)) {
             mPhoneNumberField.setError("Invalid phone number.");
             return false;

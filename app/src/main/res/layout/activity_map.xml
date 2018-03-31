@@ -10,6 +10,34 @@
         android:layout_height="match_parent"
         android:background="#fff"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/id_dri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver ID :"/>
+
+
+            <TextView
+                android:id="@+id/id_driver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00000"/>
+
+            <Button
+                android:id="@+id/status"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Start your Service"
+                android:background="@color/light_gray_header_color"
+                android:textColor="@color/button_text" />
+
+        </LinearLayout>
+
 
         <fragment
             android:id="@+id/map"

@@ -28,16 +28,16 @@ import android.view.MenuItem;
 import android.webkit.URLUtil;
 import android.widget.Toast;
 
+import org.ioengine.tracker.intro.MapActivity;
+
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
 public class MainFragment extends PreferenceFragment implements OnSharedPreferenceChangeListener {
 
-    private static final String TAG = MainFragment.class.getSimpleName();
-
-    private static final int ALARM_MANAGER_INTERVAL = 15000;
-
+    public  static final String TAG = MainFragment.class.getSimpleName();
+    public  static final int ALARM_MANAGER_INTERVAL = 15000;
     public static final String KEY_DEVICE = "id";
     public static final String KEY_URL = "url";
     public static final String KEY_INTERVAL = "interval";
@@ -45,13 +45,10 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
     public static final String KEY_ANGLE = "angle";
     public static final String KEY_ACCURACY = "accuracy";
     public static final String KEY_STATUS = "status";
-
-    private static final int PERMISSIONS_REQUEST_LOCATION = 2;
-
-    private SharedPreferences sharedPreferences;
-
-    private AlarmManager alarmManager;
-    private PendingIntent alarmIntent;
+    public static final int PERMISSIONS_REQUEST_LOCATION = 2;
+    public static SharedPreferences sharedPreferences;
+    public static  AlarmManager alarmManager;
+    public static  PendingIntent alarmIntent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,7 +58,6 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
         }
 
         setHasOptionsMenu(true);
-
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
         addPreferencesFromResource(R.xml.preferences);
         initPreferences();
@@ -69,15 +65,20 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
         findPreference(KEY_DEVICE).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
+                if(newValue != null && !newValue.equals("")){
+                    MapActivity.DriverId.setText(newValue.toString());
+                }
                 return newValue != null && !newValue.equals("");
             }
         });
+
         findPreference(KEY_URL).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 return (newValue != null) && validateServerURL(newValue.toString());
             }
         });
+
 
         findPreference(KEY_INTERVAL).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -94,6 +95,7 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
             }
         });
 
+
         Preference.OnPreferenceChangeListener numberValidationListener = new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -108,6 +110,8 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
                 return false;
             }
         };
+
+
         findPreference(KEY_DISTANCE).setOnPreferenceChangeListener(numberValidationListener);
         findPreference(KEY_ANGLE).setOnPreferenceChangeListener(numberValidationListener);
 
@@ -117,6 +121,8 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
         if (sharedPreferences.getBoolean(KEY_STATUS, false)) {
             startTrackingService(true, false);
         }
+
+        setPreferencesdisabled(false);
     }
 
     private void removeLauncherIcon() {
@@ -149,6 +155,18 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
 
     private void setPreferencesEnabled(boolean enabled) {
         findPreference(KEY_DEVICE).setEnabled(enabled);
+        if(enabled == false){
+            MapActivity.Status.setBackgroundColor(getResources().getColor(R.color.grey));
+            MapActivity.Status.setText("Start your Service");
+        }
+        //findPreference(KEY_URL).setEnabled(enabled);
+        //findPreference(KEY_INTERVAL).setEnabled(enabled);
+        //findPreference(KEY_DISTANCE).setEnabled(enabled);
+        //findPreference(KEY_ANGLE).setEnabled(enabled);
+        //findPreference(KEY_ACCURACY).setEnabled(enabled);
+    }
+
+    private void setPreferencesdisabled(boolean enabled) {
         findPreference(KEY_URL).setEnabled(enabled);
         findPreference(KEY_INTERVAL).setEnabled(enabled);
         findPreference(KEY_DISTANCE).setEnabled(enabled);
@@ -198,7 +216,7 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
         findPreference(KEY_DEVICE).setSummary(sharedPreferences.getString(KEY_DEVICE, null));
     }
 
-    private void startTrackingService(boolean checkPermission, boolean permission) {
+    public void startTrackingService(boolean checkPermission, boolean permission) {
         if (checkPermission) {
             Set<String> missingPermissions = new HashSet<>();
             if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

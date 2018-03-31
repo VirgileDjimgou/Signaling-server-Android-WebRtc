@@ -8,6 +8,8 @@ import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import org.ioengine.tracker.intro.MapActivity;
+
 public class TrackingController implements PositionProvider.PositionListener, NetworkManager.NetworkHandler {
 
     private static final String TAG = TrackingController.class.getSimpleName();
@@ -181,6 +183,9 @@ public class TrackingController implements PositionProvider.PositionListener, Ne
                     delete(position);
                 } else {
                     StatusActivity.addMessage(context.getString(R.string.status_send_fail));
+                    MapActivity.Status.setText("you are offline !");
+                    MapActivity.Status.setBackgroundColor(context.getResources().getColor(R.color.red));
+
                     retry();
                 }
                 unlock();
