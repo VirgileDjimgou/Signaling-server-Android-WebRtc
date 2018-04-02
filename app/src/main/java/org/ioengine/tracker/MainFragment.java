@@ -50,6 +50,8 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
     public static  AlarmManager alarmManager;
     public static  PendingIntent alarmIntent;
 
+    public static String id_driver_global = "";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +68,7 @@ public class MainFragment extends PreferenceFragment implements OnSharedPreferen
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 if(newValue != null && !newValue.equals("")){
-                    MapActivity.DriverId.setText(newValue.toString());
+                    id_driver_global = newValue.toString();
                 }
                 return newValue != null && !newValue.equals("");
             }

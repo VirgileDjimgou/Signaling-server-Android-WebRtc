@@ -53,6 +53,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static org.ioengine.tracker.MainFragment.id_driver_global;
+
 public class MapActivity extends BaseActivity  {
 
     @BindView(R.id.rootFrame)
@@ -76,10 +78,9 @@ public class MapActivity extends BaseActivity  {
     ArgbEvaluator argbEvaluator;
 
     private LatLng destination;
-    public static TextView DriverId ;
     public static Button Status;
     private SharedPreferences preferences;
-    private String device = "";
+    private String device = "000000";
     private Boolean actual_status ;
 
     @Override
@@ -88,16 +89,13 @@ public class MapActivity extends BaseActivity  {
         setContentView(R.layout.activity_map);
         ButterKnife.bind(this);
 
-        // init
-        preferences = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
-        device = preferences.getString(MainFragment.KEY_DEVICE, this.getApplicationContext()
-                .getString(R.string.settings_url_default_value));
+
         // initPreferences();
-        DriverId = (TextView)findViewById(R.id.id_driver);
         Status = (Button)findViewById(R.id.status);
         Status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 Intent intent = new Intent(MapActivity.this, MainActivity.class);
                 ActivityOptionsCompat options = ActivityOptionsCompat.
@@ -107,7 +105,6 @@ public class MapActivity extends BaseActivity  {
             }
         });
 
-        DriverId.setText(device);
         Toast.makeText(this, device, Toast.LENGTH_SHORT).show();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);

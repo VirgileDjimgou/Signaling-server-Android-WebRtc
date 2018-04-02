@@ -117,8 +117,8 @@ public class ShortcutActivity extends AppCompatActivity implements LostApiClient
                     if (success) {
                         Toast.makeText(ShortcutActivity.this, R.string.status_send_success, Toast.LENGTH_SHORT).show();
                         MapActivity.Status.setBackgroundColor(getResources().getColor(R.color.green));
-
                         MapActivity.Status.setText("you are online");
+
                     } else {
                         MapActivity.Status.setBackgroundColor(getResources().getColor(R.color.red));
                         MapActivity.Status.setText("you are offline !");
