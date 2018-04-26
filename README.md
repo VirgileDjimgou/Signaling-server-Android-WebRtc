@@ -3,9 +3,6 @@ Bee Driver Tracking Client is an Android GPS tracking application.
 It can work with Firebase Cloud Env amd Traccar open source server software.
 
 
-<img src="media/bee_black.png" align="left" height="128px" />
-<img align="left" width="0" height="128px" hspace="10" />
-
 <img src="media/Ioengine.jpg" align="left" height="128px" />
 <img align="right" width="0" height="128px" hspace="10" />
 
